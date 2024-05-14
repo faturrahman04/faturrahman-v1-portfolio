@@ -1,0 +1,1201 @@
+@import url(typography.css);
+
+/* CSS Variable start*/
+:root {
+  --primary-color: #feffea;
+  --second-color: #d97706;
+  --graphic-design: #064e3b;
+  --photograpgy: #f59e0b;
+  --videography: #c2410c;
+}
+/* CSS Variable end*/
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.container {
+  overflow-x: hidden;
+}
+
+/* Nav start */
+.side-nav {
+  display: none;
+}
+
+nav .nav-content .hamburger-menu {
+  display: none;
+}
+
+nav {
+  position: fixed;
+  min-width: 100vw;
+  background-color: var(--primary-color);
+  z-index: 101;
+}
+
+nav .nav-content {
+  display: flex;
+  height: 10vh;
+  width: 88%;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+
+nav .nav-content .title {
+  font-size: 2.5rem;
+  font-family: "Poppins Bold";
+}
+
+nav .nav-content ul {
+  display: flex;
+  width: 47%;
+  justify-content: space-between;
+  font-size: 1rem;
+  font-family: "Poppins Regular";
+}
+
+nav .nav-content ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  transition: 300ms;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+nav ul li a::before {
+  content: "";
+  position: absolute;
+  border: 1px solid var(--second-color);
+  width: 100%;
+  height: 1px;
+  background-color: var(--second-color);
+  top: 1.5rem;
+  transform: scale(0);
+  transition: 300ms ease-out;
+}
+
+nav ul li a:hover {
+  color: var(--second-color);
+}
+
+nav ul li a:hover::before {
+  transform: scale(1);
+}
+
+@media only screen and (max-width: 768px) {
+  .side-nav {
+    border-radius: 10px 0 10px 10px;
+    display: block;
+    position: fixed;
+    height: 40vh;
+    width: 40vw;
+    background-color: #dce0da;
+    top: 4rem;
+    z-index: 2;
+    transition: 400ms;
+    right: 0;
+  }
+
+  .animation-side {
+    transform: scale(0);
+  }
+
+  .click-side {
+    transform: scale(1);
+  }
+
+  .side-nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    align-items: center;
+    font-family: "Poppins Regular";
+  }
+
+  .side-nav ul li {
+    list-style: none;
+  }
+
+  .side-nav ul li a {
+    text-decoration: none;
+    color: black;
+    transition: 300ms;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+  }
+
+  .side-nav ul li a::before {
+    content: "";
+    position: absolute;
+    border: 1px solid var(--second-color);
+    width: 100%;
+    height: 1px;
+    background-color: var(--second-color);
+    top: 1.5rem;
+    transform: scale(0);
+    transition: 300ms ease-out;
+  }
+
+  .side-nav ul li a:hover {
+    color: var(--second-color);
+  }
+
+  .side-nav ul li a:hover::before {
+    transform: scale(1);
+  }
+
+  nav .nav-content ul {
+    display: none;
+  }
+
+  nav .nav-content .hamburger-menu {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+  }
+
+  nav .nav-content .hamburger-menu .checkbox {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    filter: opacity(0);
+    cursor: pointer;
+  }
+
+  nav .nav-content .hamburger-menu span:nth-child(2) {
+    background-color: var(--second-color);
+    width: 100%;
+    height: 5px;
+  }
+
+  nav .nav-content .hamburger-menu span:nth-child(3) {
+    background-color: var(--second-color);
+    width: 100%;
+    height: 5px;
+  }
+
+  nav .nav-content .hamburger-menu span:last-child {
+    background-color: var(--second-color);
+    width: 100%;
+    height: 5px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .side-nav {
+    display: block;
+    border-radius: 10px 0 10px 10px;
+    position: fixed;
+    height: 40vh;
+    width: 50vw;
+    background-color: #dce0da;
+    top: 4rem;
+    z-index: 2;
+    transition: 400ms;
+    right: 0;
+  }
+}
+/* Nav end */
+
+/* Container home start */
+.container .home {
+  background-color: var(--primary-color);
+  padding-top: 7rem;
+  padding-left: 4rem;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  z-index: -100;
+  height: 430px;
+}
+
+.container .home .home-content {
+  position: relative;
+  width: 90%;
+  justify-content: space-between;
+  display: flex;
+  height: 300px;
+}
+
+.container .home .home-content .name {
+  display: flex;
+  position: relative;
+  align-items: end;
+  font-size: 4rem;
+  font-family: "Poppins Bold";
+  max-width: 12rem;
+  line-height: 1.1em;
+  height: 13rem;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.container .home .home-content .name::before {
+  content: "";
+  position: absolute;
+  background-color: var(--second-color);
+  border: 1px solid var(--second-color);
+  width: 40%;
+  height: 3px;
+}
+
+.container .home .home-content .hero-image {
+  position: relative;
+  right: 17rem;
+  max-width: 450px;
+}
+
+.container .home .home-content .blob {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  max-width: 450px;
+}
+
+.container .home .home-content .satria {
+  margin-top: 2rem;
+  z-index: 1;
+  max-width: 350px;
+}
+
+.container .home .home-content p {
+  position: absolute;
+  right: 0;
+  top: 2rem;
+  width: 26%;
+  font-family: "Poppins Regular";
+}
+
+.container .icon {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 16%;
+  top: 21rem;
+  left: 8rem;
+  font-weight: bold;
+  text-decoration: none;
+  z-index: 100;
+}
+
+.container .icon a img {
+  max-width: 30px;
+  max-height: 30px;
+  transition: 400ms;
+  z-index: -1;
+}
+
+.container .icon a img:hover {
+  transform: scale(0.8);
+}
+
+.container .home .experience {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  top: 25rem;
+  left: 8rem;
+}
+
+.container .home .number {
+  font-size: 3rem;
+  font-family: "Poppins Bold";
+}
+
+.container .home .years {
+  width: 20%;
+  margin-left: 0.3rem;
+  font-family: "Poppins Light";
+  font-size: 1rem;
+  line-height: 1.2rem;
+  letter-spacing: 1px;
+}
+
+@media only screen and (max-width: 992px) {
+  .container .home {
+    background-color: var(--primary-color);
+    padding-top: 7rem;
+    padding-left: 4rem;
+    overflow-y: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    z-index: -100;
+    height: 430px;
+  }
+
+  .container .home .home-content {
+    position: relative;
+    width: 90%;
+    justify-content: space-between;
+    display: flex;
+    height: 300px;
+  }
+
+  .container .home .home-content .name {
+    display: flex;
+    position: relative;
+    align-items: end;
+    font-size: 4rem;
+    font-family: "Poppins Bold";
+    max-width: 12rem;
+    line-height: 1.1em;
+    height: 13rem;
+    top: 0;
+    right: 0;
+    z-index: -1;
+  }
+
+  .container .home .home-content .name::before {
+    content: "";
+    position: absolute;
+    background-color: var(--second-color);
+    border: 1px solid var(--second-color);
+    width: 40%;
+    height: 3px;
+  }
+
+  .container .home .home-content .hero-image {
+    position: relative;
+    right: 15rem;
+    max-width: 450px;
+  }
+
+  .container .home .home-content .blob {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    max-width: 450px;
+  }
+
+  .container .home .home-content .satria {
+    margin-top: 2rem;
+    z-index: 1;
+    max-width: 350px;
+  }
+
+  .container .home .home-content p {
+    position: absolute;
+    right: 0;
+    top: 2rem;
+    width: 29%;
+    font-size: 1rem;
+    font-family: "Poppins Regular";
+  }
+
+  .container .icon {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 17%;
+    top: 21rem;
+    left: 7rem;
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 100;
+  }
+
+  .container .icon a img {
+    max-width: 30px;
+    max-height: 30px;
+    z-index: 2;
+    transition: 400ms;
+  }
+
+  .container .icon a img:hover {
+    transform: scale(0.8);
+  }
+
+  .container .home .experience {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    top: 25rem;
+    left: 7rem;
+  }
+
+  .container .home .number {
+    font-size: 3rem;
+    font-family: "Poppins Bold";
+  }
+
+  .container .home .years {
+    width: 20%;
+    margin-left: 0.3rem;
+    font-family: "Poppins Light";
+    font-size: 1rem;
+    line-height: 1.2rem;
+    letter-spacing: 1px;
+  }
+}
+
+@media only screen and (max-width: 939px) {
+  .container .home .home-content p {
+    display: none;
+  }
+
+  .container .home .home-content .hero-image {
+    position: relative;
+    right: 0;
+    max-width: 450px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .container .icon {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+    top: 21rem;
+    left: 6.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 100;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container .home {
+    background-color: var(--primary-color);
+    padding-top: 7rem;
+    padding-left: 3rem;
+  }
+
+  .container .home .home-content {
+    position: relative;
+    width: 96%;
+    justify-content: space-between;
+    display: flex;
+    height: 300px;
+  }
+
+  .container .icon {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+    top: 21rem;
+    left: 4rem;
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 10;
+  }
+  .container .home .experience {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    top: 25rem;
+    left: 4rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .container .home {
+    padding-left: 0;
+    padding-top: 5rem;
+  }
+
+  .container .home .home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .container .home .home-content .name {
+    font-size: 3rem;
+    height: 6rem;
+    text-align: center;
+    max-width: 9rem;
+    margin: auto;
+  }
+
+  .container .home .home-content .name::before {
+    content: "";
+    position: absolute;
+    background-color: var(--second-color);
+    border: 1px solid var(--second-color);
+    width: 40%;
+    height: 3px;
+  }
+
+  .container .icon {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 30%;
+    top: 6rem;
+    left: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 100;
+  }
+
+  .container .home .experience {
+    display: none;
+  }
+
+  .container .home .home-content .satria {
+    margin-top: 2rem;
+    z-index: 1;
+    max-width: 300px;
+  }
+}
+/* Container home end */
+
+/* Services start */
+.container .service {
+  position: relative;
+  padding: 2rem;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.container .service .title {
+  font-family: "Poppins Semibold";
+  text-align: center;
+}
+
+.container .service h1 {
+  font-family: "Poppins Bold";
+  text-align: center;
+  margin-top: -0.5rem;
+}
+
+.container .service .description {
+  font-family: "Poppins Regular";
+  text-align: center;
+}
+
+.container .service .icon-skill {
+  display: flex;
+  justify-content: space-evenly;
+  width: 60%;
+  margin: auto;
+  margin-top: 1rem;
+}
+
+.container .service .skill-cover {
+  height: 220px;
+}
+
+.container .service .icon-skill .icon1 img {
+  height: 7rem;
+  width: 7rem;
+}
+
+.container .service .icon-skill .icon1 h5 {
+  font-family: "Poppins Semibold";
+  text-align: center;
+  font-size: 1rem;
+}
+
+.container .service .icon-skill .icon1 p {
+  font-family: "Poppins Regular";
+  text-align: center;
+  font-size: 1rem;
+}
+
+.container .service h1.tools-software {
+  font-family: "Poppins Bold";
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.container .service .progress-skill {
+  display: flex;
+  align-items: center;
+  width: 65%;
+  height: 100%;
+  margin: auto;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.container .service .progress-skill h6 {
+  font-family: "Poppins Bold";
+  font-size: 1rem;
+  text-align: start;
+}
+
+.container .service .progress-skill .flex-column {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.container .service .progress-skill .outside-bar {
+  width: 70%;
+  height: 80%;
+  border-radius: 35px;
+  background-color: rgb(187, 187, 187);
+  overflow: hidden;
+}
+
+.container .service .progress-skill .outside-bar .bar-fill {
+  transform: translate(-10%);
+  background-color: var(--photograpgy);
+  border-radius: 35px;
+  padding-right: 1rem;
+  height: 100%;
+}
+
+.container .service .progress-skill .outside-bar .bar-fill-2 {
+  transform: translate(-25%);
+  background-color: var(--graphic-design);
+  border-radius: 35px;
+  padding-right: 1rem;
+  height: 100%;
+}
+
+.container .service .progress-skill .outside-bar .bar-fill-3 {
+  transform: translate(-20%);
+  background-color: var(--videography);
+  border-radius: 35px;
+  padding-right: 1rem;
+  height: 100%;
+}
+
+.container .service .progress-skill .outside-bar .bar-fill-4 {
+  transform: translate(-10%);
+  background-color: var(--photograpgy);
+  border-radius: 35px;
+  padding-right: 1rem;
+  height: 100%;
+}
+
+.container .service .progress-skill .outside-bar .bar-fill-5 {
+  transform: translate(-25%);
+  background-color: var(--graphic-design);
+  border-radius: 35px;
+  padding-right: 1rem;
+  height: 100%;
+}
+
+.container .service .progress-skill .outside-bar .bar-fill p {
+  text-align: end;
+  color: var(--primary-color);
+  font-family: "Poppins Regular";
+  font-size: 0.8rem;
+}
+
+.container .service .progress-skill .outside-bar .bar-fill-2 p {
+  text-align: end;
+  color: var(--primary-color);
+  font-family: "Poppins Regular";
+  font-size: 0.8rem;
+}
+
+.container .service .progress-skill .outside-bar .bar-fill-3 p {
+  text-align: end;
+  color: var(--primary-color);
+  font-family: "Poppins Regular";
+  font-size: 0.8rem;
+}
+
+.container .service .progress-skill .outside-bar .bar-fill-4 p {
+  text-align: end;
+  color: var(--primary-color);
+  font-family: "Poppins Regular";
+  font-size: 0.8rem;
+}
+
+.container .service .progress-skill .outside-bar .bar-fill-5 p {
+  text-align: end;
+  color: var(--primary-color);
+  font-family: "Poppins Regular";
+  font-size: 0.8rem;
+}
+
+@media only screen and (max-width: 1100px) {
+  .container .service .progress-skill {
+    display: flex;
+    align-items: center;
+    width: 75%;
+    height: 100%;
+    margin: auto;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .container .service .progress-skill h6 {
+    font-family: "Poppins Bold";
+    font-size: 1rem;
+    text-align: start;
+  }
+
+  .container .service .progress-skill .flex-column {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+  }
+
+  .container .service .progress-skill .outside-bar {
+    width: 70%;
+    height: 80%;
+    border-radius: 35px;
+    background-color: rgb(187, 187, 187);
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .container .service .progress-skill {
+    display: flex;
+    align-items: center;
+    width: 85%;
+    height: 100%;
+    margin: auto;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .container .service .progress-skill h6 {
+    font-family: "Poppins Bold";
+    font-size: 1rem;
+    text-align: start;
+  }
+
+  .container .service .progress-skill .flex-column {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+  }
+
+  .container .service .progress-skill .outside-bar {
+    width: 70%;
+    height: 80%;
+    border-radius: 35px;
+    background-color: rgb(187, 187, 187);
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container .service .title {
+    font-family: "Poppins Semibold";
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .container .service h1 {
+    font-family: "Poppins Bold";
+    text-align: center;
+    margin-top: -0.5rem;
+    font-size: 1.8rem;
+  }
+
+  .container .service h1.tools-software {
+    font-family: "Poppins Bold";
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.8rem;
+  }
+
+  .container .service .description {
+    font-family: "Poppins Regular";
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  .container .service .icon-skill {
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+    margin: auto;
+    margin-top: 1rem;
+  }
+
+  .container .service .icon-skill .icon1 img {
+    height: 6rem;
+    width: 6rem;
+  }
+
+  .container .service .icon-skill .icon1 h5 {
+    font-family: "Poppins Semibold";
+    text-align: center;
+    font-size: 0.8rem;
+  }
+
+  .container .service .icon-skill .icon1 p {
+    font-family: "Poppins Regular";
+    text-align: center;
+    font-size: 0.8rem;
+  }
+
+  .container .service .progress-skill {
+    display: flex;
+    align-items: center;
+    width: 97%;
+    height: 100%;
+    margin: auto;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .container .service .progress-skill h6 {
+    font-family: "Poppins Bold";
+    font-size: 0.8rem;
+    text-align: start;
+  }
+
+  .container .service .progress-skill .flex-column {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+  }
+
+  .container .service .progress-skill .outside-bar {
+    width: 70%;
+    height: 100%;
+    border-radius: 35px;
+    background-color: rgb(187, 187, 187);
+    overflow: hidden;
+  }
+
+  .container .service .progress-skill .outside-bar .bar-fill p {
+    text-align: end;
+    color: var(--primary-color);
+    font-family: "Poppins Regular";
+    font-size: 0.7rem;
+  }
+
+  .container .service .progress-skill .outside-bar .bar-fill-2 p {
+    text-align: end;
+    color: var(--primary-color);
+    font-family: "Poppins Regular";
+    font-size: 0.7rem;
+  }
+
+  .container .service .progress-skill .outside-bar .bar-fill-3 p {
+    text-align: end;
+    color: var(--primary-color);
+    font-family: "Poppins Regular";
+    font-size: 0.7rem;
+  }
+
+  .container .service .progress-skill .outside-bar .bar-fill-4 p {
+    text-align: end;
+    color: var(--primary-color);
+    font-family: "Poppins Regular";
+    font-size: 0.7rem;
+  }
+
+  .container .service .progress-skill .outside-bar .bar-fill-5 p {
+    text-align: end;
+    color: var(--primary-color);
+    font-family: "Poppins Regular";
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container .service .title {
+    font-family: "Poppins Semibold";
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  .container .service h1 {
+    font-family: "Poppins Bold";
+    text-align: center;
+    margin-top: -0.5rem;
+    font-size: 1.5rem;
+  }
+
+  .container .service .description {
+    font-family: "Poppins Regular";
+    text-align: center;
+    font-size: 0.8rem;
+  }
+  .container .service h1.tools-software {
+    font-family: "Poppins Bold";
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .container .service .icon-skill .icon1 {
+    display: grid;
+    place-items: center;
+  }
+
+  .container .service .icon-skill .icon1 img {
+    height: 4rem;
+    width: 4rem;
+  }
+
+  .container .service .icon-skill .icon1 h5 {
+    font-family: "Poppins Semibold";
+    text-align: center;
+    font-size: 0.7rem;
+  }
+
+  .container .service .icon-skill .icon1 p {
+    font-family: "Poppins Regular";
+    text-align: center;
+    font-size: 0.7rem;
+  }
+
+  .container .service .progress-skill {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .container .service .progress-skill h6 {
+    font-family: "Poppins Bold";
+    font-size: 0.8rem;
+    text-align: start;
+  }
+
+  .container .service .progress-skill .flex-column {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .container .service .progress-skill .outside-bar {
+    width: 60%;
+    height: 80%;
+    border-radius: 35px;
+    background-color: rgb(187, 187, 187);
+    overflow: hidden;
+  }
+}
+
+/* Services end */
+
+/* Portfolio start */
+.container .portfolio {
+  position: relative;
+  background-color: var(--primary-color);
+  padding: 2rem;
+}
+
+.container .portfolio .title-portfolio {
+  font-family: "Poppins Semibold";
+  text-align: center;
+}
+
+.container .portfolio h1.masterpiece {
+  font-family: "Poppins Bold";
+  text-align: center;
+}
+
+.container .portfolio .foto-portfolio {
+  margin: auto;
+  width: 65%;
+  display: grid;
+  place-items: center;
+  gap: 0.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.container .portfolio .foto-portfolio .photography {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2px;
+}
+/* Portfolio end */
+
+/* Contact start */
+.container .contact {
+  position: relative;
+  background-color: #ffffff;
+  overflow: hidden;
+  height: 400px;
+  padding-top: 2rem;
+}
+
+.container .contact h1 {
+  text-align: center;
+  font-family: "Poppins Bold";
+}
+
+.container .contact form {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 50%;
+  margin: 3rem auto;
+  justify-content: space-around;
+  z-index: 999;
+}
+
+.container .contact form .email {
+  height: 2.5rem;
+  z-index: 100;
+  background-color: #ffffffaf;
+  border-radius: 5px;
+  outline: none;
+  border: 1.5px inset;
+  font-family: "Poppins Regular";
+  padding: 0 0.5rem;
+}
+
+.container .contact form .email:focus {
+  box-shadow: 3px 3px 3px gainsboro;
+}
+
+.container .contact form .handphone {
+  height: 2.5rem;
+  z-index: 100;
+  background-color: #ffffffaf;
+  border-radius: 5px;
+  outline: none;
+  border: 1.5px inset;
+  font-family: "Poppins Regular";
+  padding: 0 0.5rem;
+  margin-top: 2rem;
+}
+
+.container .contact form button {
+  z-index: 100;
+  width: 30%;
+  height: 2rem;
+  margin: auto;
+  background-color: rgb(255, 197, 90);
+  border: 0;
+  border-radius: 3px;
+  font-family: 2rem;
+  font-family: "Poppins Semibold";
+  cursor: pointer;
+}
+
+.container .contact form button:hover {
+  background-color: gainsboro;
+}
+
+.container .contact .wave {
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+@media screen and (max-width: 992px) {
+  .container .contact form {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 50%;
+    margin: 3rem auto;
+    justify-content: space-around;
+    z-index: 999;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container .contact form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 50%;
+    margin: 3rem auto;
+    justify-content: space-around;
+    z-index: 999;
+  }
+}
+/* Contact end */
+
+/* Footer start */
+.container footer {
+  position: relative;
+  background-color: rgb(59, 54, 54);
+  color: #feffeaa9;
+  font-family: "Poppins Light";
+  height: 8vh;
+}
+
+.container footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  margin: auto;
+  height: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.container footer .footer-content h6 {
+  font-size: 1rem;
+}
+
+.container footer .footer-content ul {
+  display: flex;
+  width: 25%;
+  justify-content: space-between;
+}
+
+.container footer .footer-content ul li {
+  list-style: none;
+}
+
+.container footer .footer-content ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media screen and (max-width: 992px) {
+  .container footer .footer-content ul {
+    display: flex;
+    width: 45%;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container footer .footer-content ul {
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+  }
+
+  .container footer .footer-content h6 {
+    font-size: 0.8rem;
+  }
+
+  .container footer .footer-content ul li a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 0.8rem;
+  }
+}
+/* Footer end */
