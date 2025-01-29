@@ -1050,11 +1050,27 @@ nav ul li a:hover::before {
 		background-color: rgb(187, 187, 187);
 		overflow: hidden;
 	}
+
+	.container .portfolio .foto-portfolio .project {
+		display: block;
+		width: 16rem;
+		height: 100%;
+		object-fit: cover;
+		border-radius: 2px;
+	}
+
+	.container .portfolio {
+	position: relative;
+	background-color: var(--primary-color);
+	padding: 0rem;
+}
 }
 
 /* Services end */
 
 /* Portfolio start */
+
+
 .container .portfolio {
 	position: relative;
 	background-color: var(--primary-color);
@@ -1074,10 +1090,10 @@ nav ul li a:hover::before {
 
 .container .portfolio .foto-portfolio {
 	margin: auto;
-	width: 85%;
+	width: 90%;
 	display: grid;
 	place-items: center;
-	gap: 2rem;
+	gap: 0.5rem;
 	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 }
 
@@ -1242,6 +1258,15 @@ nav ul li a:hover::before {
 		width: 60%;
 		justify-content: space-between;
 	}
+
+	.container .portfolio .foto-portfolio {
+	margin: auto;
+	width: 100%;
+	display: grid;
+	place-items: center;
+	gap: 0.5rem;
+	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
 
 	.container footer .footer-content h6 {
 		font-size: 0.8rem;
