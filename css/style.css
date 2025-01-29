@@ -1064,6 +1064,38 @@ nav ul li a:hover::before {
 	background-color: var(--primary-color);
 	padding: 0rem;
 }
+
+@media only screen and (max-width: 376px) {
+	.container > .portfolio {
+		padding: 0;
+	}
+
+	.container .portfolio .foto-portfolio {
+	margin: auto;
+	width: 100%;
+	display: grid;
+	place-items: center;
+	gap: 2rem;
+	grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+}
+
+	.container .portfolio .foto-portfolio .project {
+		display: block;
+		width: 8rem;
+		height: 100%;
+		object-fit: cover;
+		border-radius: 2px;
+	}
+
+	.container .portfolio .foto-portfolio {
+	margin: auto;
+	width: 100%;
+	display: grid;
+	place-items: center;
+	gap: 2rem;
+	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
+}
 }
 
 /* Services end */
@@ -1093,7 +1125,7 @@ nav ul li a:hover::before {
 	width: 90%;
 	display: grid;
 	place-items: center;
-	gap: 0.5rem;
+	gap: 2rem;
 	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 }
 
@@ -1264,8 +1296,8 @@ nav ul li a:hover::before {
 	width: 100%;
 	display: grid;
 	place-items: center;
-	gap: 0.5rem;
-	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+	gap: 2rem;
+	grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
 }
 
 	.container footer .footer-content h6 {
