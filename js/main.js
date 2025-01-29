@@ -1,6 +1,7 @@
 const hamburgerMenu = document.querySelector(
   "nav .nav-content .hamburger-menu .checkbox"
 );
+
 const sideNav = document.querySelector(".side-nav");
 const container = document.querySelector(".container");
 
@@ -8,7 +9,7 @@ hamburgerMenu.addEventListener("click", function () {
   if (hamburgerMenu.checked == true) {
     sideNav.classList.add("click-side");
     container.style.filter = "brightness(0.4)";
-  } else {
+  } else if (hamburgerMenu.checked == false || sideNav.style.display == 'none') {
     sideNav.classList.remove("click-side");
     container.style.filter = "brightness(1)";
   }
@@ -16,13 +17,19 @@ hamburgerMenu.addEventListener("click", function () {
 
 function smoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener("click", function(e) {
-          e.preventDefault();
-  
-          document.querySelector(this.getAttribute('href')).scrollIntoView({
-              behavior: 'smooth'
-          })
+    a.addEventListener("click", function(e) {
+      e.preventDefault();
+
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior : 'smooth',
       })
+    })
   })
 }
 smoothScroll();
+
+
+
+
+
+
