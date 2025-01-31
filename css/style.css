@@ -209,7 +209,7 @@ nav ul li a:hover::before {
 		width: 50vw;
 		background-color: #dce0da;
 		top: 4rem;
-		z-index: 2;
+		z-index: 1;
 		transition: 400ms;
 		right: 0;
 	}
@@ -597,8 +597,8 @@ nav ul li a:hover::before {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		height: 30%;
 		top: 6rem;
+		gap: 1rem;
 		left: 2rem;
 		font-weight: bold;
 		text-decoration: none;

@@ -9,11 +9,19 @@ hamburgerMenu.addEventListener("click", function () {
   if (hamburgerMenu.checked == true) {
     sideNav.classList.add("click-side");
     container.style.filter = "brightness(0.4)";
-  } else if (hamburgerMenu.checked == false || sideNav.style.display == 'none') {
+  } else if (hamburgerMenu.checked == false) {
     sideNav.classList.remove("click-side");
     container.style.filter = "brightness(1)";
   }
 });
+
+window.addEventListener("resize", function() {
+  if (this.innerWidth > 768) {
+    container.style.filter = "brightness(1)";
+  } else if (this.innerWidth <= 768) {
+    container.style.filter = "brightness(0.4)"
+  }
+})
 
 function smoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach(a => {
