@@ -18,8 +18,6 @@ hamburgerMenu.addEventListener("click", function () {
 window.addEventListener("resize", function() {
   if (this.innerWidth > 768) {
     container.style.filter = "brightness(1)";
-  } else if (this.innerWidth <= 768) {
-    container.style.filter = "brightness(0.4)";
   }
 })
 if (window.innerWidth <= 768 && hamburgerMenu.checked) {
