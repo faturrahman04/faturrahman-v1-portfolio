@@ -22,6 +22,9 @@ window.addEventListener("resize", function() {
     container.style.filter = "brightness(0.4)"
   }
 })
+if (window.innerWidth <= 768 && hamburgerMenu.checked) {
+  container.style.filter = "brightness(1)";
+} 
 
 function smoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach(a => {
