@@ -217,6 +217,12 @@ nav ul li a:hover::before {
 /* Nav end */
 
 /* Container home start */
+@media only screen and (max-width: 768px) {
+	.container {
+		filter: brightness(1);
+	}
+}
+
 .container .home {
 	background-color: var(--primary-color);
 	padding-top: 7rem;
